@@ -1,0 +1,80 @@
+<html>
+	<head>
+
+		<title>Arrays</title>
+
+		<script type = "text/javascript">
+
+			var numList = new Array(10,4,67,34,22,67,75,74,33,0);
+
+			Array.prototype.print = function(){
+
+				document.write(" List: [ ");
+
+				var i = 0;
+
+				while(i<this.length-1){
+
+					document.write(this[i]+ ", ");
+
+					i++;
+
+				}
+
+				document.write(this[i]);
+
+				document.write("]<br/>");
+
+			}
+
+			<!-- prototype function to print even numbers-->
+			
+			Array.prototype.printEven = function(){
+			
+				document.write(" Even numbers in the list: ");
+				
+				for(i = 0; i< this.length; i++){
+					
+					if((this[i]%2 === 0 )){
+						
+						document.write(this[i] + " ");
+						
+					}					
+
+				}
+				
+				document.write("<br/>");
+			
+			}
+
+			numList.print();
+						
+			document.write("Sorted ascending");
+						
+			numList.sort(function(a,b) { return a-b; });
+			
+			numList.print();
+			
+			document.write("Sorted descending");
+			
+			numList.sort((a,b) => b-a);
+			
+			numList.print();
+			
+			document.write("pop() and shift() once <br/>");
+			
+			numList.pop();
+			
+			numList.shift();
+			
+			numList.print();		
+			
+		</script>
+
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
