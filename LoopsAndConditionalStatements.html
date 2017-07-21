@@ -1,0 +1,65 @@
+<html>
+
+	<head>
+
+		<title>Input name and find ASCII</title>
+
+		<script type = "text/javascript">
+
+		<!-- Read from the prompt--> 
+
+		var firstName = prompt("Enter first name: ");
+
+		var secName = prompt("Enter second name: ")
+
+		<!-- get time and greet appropriately-->
+
+		document.write("Now: " + new Date().toLocaleString() + "<br/><br/>");
+	
+		var hours = new Date().getHours();
+
+		if(hours < 12){
+
+			document.write("Hi!! Welcome!! Good Morning ");
+
+		}else{
+
+			document.write("Hi!! Welcome!! Good Afternoon");
+
+		}
+
+		document.write( " "  + firstName + " " + secName +  "<br/>");
+
+		<!--do while loop to find total ASCII value of characters in the given name-->
+
+		var name = firstName + secName;
+
+		if(0 == name.length)
+
+			document.write("You did not enter your name. ");
+		
+		else{
+			
+			var i = 0;
+
+			var value = 0;
+
+			do{
+			
+				value = value + (name.charCodeAt(i));
+				
+				i++;
+
+			}while(i < name.length);
+
+			document.write("Total ASCII value of characters in the given name : " + value);
+		}
+		</script>
+
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

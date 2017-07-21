@@ -1,0 +1,43 @@
+<html>
+
+	<title>Function</title>
+
+	<head>
+
+		<script type = "text/javascript">
+
+		<!-- Fuction to read number until a valid number is given -->
+
+		function readInput(){
+
+			var num = parseInt(prompt("Enter a number"));
+
+			if(!isNaN(num)){
+
+				document.write("Input number : " + num);
+
+				return num;
+
+			}
+			else{
+
+				alert("Enter valid number");
+
+				return readInput();
+			}
+			
+		}
+
+		var inputNum = readInput();
+		
+		document.write("<br/>Read a valid number : " + inputNum)
+		
+		</script>
+
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
